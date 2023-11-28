@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+    <!-- MAIN -->
+    {% block contenido%}
+
+
+
+    <div class="slide-item overlay" style="background-image: url('{%static 'assets/images/slider-1.jpg' %}')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <h1 class="heading mb-3">Talleres adultos mayor Duoc</h1>
+            <p class="lead text-white mb-5"></p>
+            <div class="container">
+              {% if not user.is_authenticated %}
+                  <div class="row">
+                      <div class="col">
+                          <p><a href="{% url 'register' %}" class="btn btn-primary mx-2">Registrarse</a></p>
+                      </div>
+                      <div class="col">
+                          <p><a href="{% url 'login' %}" class="btn btn-primary mx-2">Iniciar sesión</a></p>
+                      </div>
+                  </div>
+              {% endif %}
+          </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+
+
+    <div class="site-section" style="background-color: aliceblue;">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-3">
+            <div class="service">
+              <a href="#" class="d-block"><img src="{%static 'assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Talleres personalizados</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-3">
+            <div class="service">
+              <a href="#" class="d-block"><img src="{%static 'assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Centro de reposo</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-3">
+            <div class="service">
+              <a href="#" class="d-block"><img src="{%static 'assets/images/img_2_sq.jpg' %}" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Actividades recreativas</h3>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-3">
+            <div class="service">
+              <a href="#" class="d-block"><img src="{%static 'assets/images/img_3_sq.jpg' %}" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Los mejores especialistas</h3>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-primary count-numbers">
+      <div class="container">
+        <div class="row">
+         <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="counter-wrap text-center">
+            <strong class="counter d-block"><span class="number" data-number="580"></span></strong>
+            <span>Personas inscritas en talleres</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="counter-wrap text-center">
+            <strong class="counter d-block"><span class="number" data-number="30"></span></strong>
+            <span>Profesionales a tu disposición</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="counter-wrap text-center">
+            <strong class="counter d-block">$<span class="number" data-number="4520000"></span></strong>
+            <span>Dinero invertido en actividades para ti</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="counter-wrap text-center">
+            <strong class="counter d-block"><span class="number" data-number="100"></span>%</strong>
+            <span>Personas felices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="site-section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
+          <div class="testimonial text-center">
+            <img src="{%static 'assets/images/person_1.jpg' %}" alt="Image" class="img-fluid">
+            <blockquote>
+              <p class="quote">Una experiencia increible, sin duda las mejores actividades para la gente que tiene tiempo de salir a compartir</p>
+              <cite class="author">Elizabeth Peña</cite>
+            </blockquote>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
+          <div class="testimonial text-center">
+            <img src="{%static 'assets/images/person_1.jpg' %}" alt="Image" class="img-fluid">
+            <blockquote>
+              <p class="quote">Lo mejor de lo mejor!</p>
+              <cite class="author">Margarita Solís</cite>
+            </blockquote>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
+          <div class="testimonial text-center">
+            <img src="{%static 'assets/images/person_1.jpg' %}" alt="Image" class="img-fluid">
+            <blockquote>
+              <p class="quote">Con la mejor actitúd para mi primer día de karate</p>
+              <cite class="author">Constanza Gómez</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+
+  {% endblock %}
